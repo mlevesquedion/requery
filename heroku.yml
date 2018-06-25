@@ -1,0 +1,5 @@
+build:
+  languages:
+    - php
+run:
+  web: php index.php
