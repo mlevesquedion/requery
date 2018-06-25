@@ -1,6 +1,0 @@
-build:
-  languages:
-    - elm
-
-run:
-  web: open index.html
