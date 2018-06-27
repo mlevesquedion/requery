@@ -60,8 +60,8 @@ type alias Colors =
 
 colors : Colors
 colors =
-    { primary = rgb 61 52 139
-    , secondary = rgb 118 120 237
+    { primary = rgb 118 120 237
+    , secondary = rgb 61 52 139
     , tertiary = rgb 241 135 1
     , sql = rgb 247 184 1
     , java = rgb 243 91 4
