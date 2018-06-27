@@ -15392,6 +15392,10 @@ var _user$project$Types$NewSQL = function (a) {
 	return {ctor: 'NewSQL', _0: a};
 };
 
+var _user$project$View$withPrefix = F2(
+	function (x, y) {
+		return A2(_elm_lang$core$Basics_ops['++'], x, y);
+	})('String query = \"\"\n+ ');
 var _user$project$View$pageWrapper = _rtfeldman$elm_css$Html_Styled$div(
 	{
 		ctor: '::',
@@ -15452,8 +15456,8 @@ var _user$project$View$halfPageDiv = _rtfeldman$elm_css$Html_Styled$div(
 		_1: {ctor: '[]'}
 	});
 var _user$project$View$colors = {
-	primary: A3(_rtfeldman$elm_css$Css$rgb, 61, 52, 139),
-	secondary: A3(_rtfeldman$elm_css$Css$rgb, 118, 120, 237),
+	primary: A3(_rtfeldman$elm_css$Css$rgb, 118, 120, 237),
+	secondary: A3(_rtfeldman$elm_css$Css$rgb, 61, 52, 139),
 	tertiary: A3(_rtfeldman$elm_css$Css$rgb, 241, 135, 1),
 	sql: A3(_rtfeldman$elm_css$Css$rgb, 247, 184, 1),
 	java: A3(_rtfeldman$elm_css$Css$rgb, 243, 91, 4)
@@ -15709,7 +15713,11 @@ var _user$project$View$styledView = function (model) {
 										}),
 									_1: {
 										ctor: '::',
-										_0: A3(_user$project$View$largeTextArea, _user$project$View$colors.java, model.java, _user$project$Types$NewJava),
+										_0: A3(
+											_user$project$View$largeTextArea,
+											_user$project$View$colors.java,
+											_user$project$View$withPrefix(model.java),
+											_user$project$Types$NewJava),
 										_1: {ctor: '[]'}
 									}
 								}),
@@ -15733,7 +15741,7 @@ var _user$project$View$Colors = F5(
 		return {primary: a, secondary: b, tertiary: c, sql: d, java: e};
 	});
 
-var _user$project$Translate$sqlInJava = _elm_lang$core$Regex$regex('( ?)( *)(\\w.*[\\w\\*]|\\w)');
+var _user$project$Translate$sqlInJava = _elm_lang$core$Regex$regex('( ?)( *)([\\w\\(].*[\\w\\*\\)]|\\w)');
 var _user$project$Translate$toSQL = function (java) {
 	var matches = A3(
 		_elm_lang$core$Regex$find,
@@ -15796,6 +15804,7 @@ var _user$project$Translate$toJava = function (_p3) {
 };
 var _user$project$Translate$toJavaLines = A3(_user$project$Translate$translateLines, _user$project$Translate$toJava, '\n+ ', ';');
 
+var _user$project$Main$minusPrefix = _elm_lang$core$String$dropLeft(20);
 var _user$project$Main$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
@@ -15813,8 +15822,9 @@ var _user$project$Main$update = F2(
 				return _elm_lang$core$Native_Utils.update(
 					model,
 					{
-						java: _p2,
-						sql: _user$project$Translate$toSQLLines(_p2)
+						java: _user$project$Main$minusPrefix(_p2),
+						sql: _user$project$Translate$toSQLLines(
+							_user$project$Main$minusPrefix(_p2))
 					});
 			default:
 				return model;
