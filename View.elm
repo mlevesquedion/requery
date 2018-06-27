@@ -145,6 +145,11 @@ pageWrapper =
         ]
 
 
+withPrefix : String -> String
+withPrefix =
+    (++) "String query = \"\"\n+ "
+
+
 styledView : Model -> Html Msg
 styledView model =
     pageWrapper
@@ -156,7 +161,7 @@ styledView model =
                 ]
             , halfPageDiv
                 [ columnHeader colors.java [ text "Java" ]
-                , largeTextArea colors.java model.java NewJava
+                , largeTextArea colors.java (withPrefix model.java) NewJava
                 ]
             ]
         ]
