@@ -11,6 +11,11 @@ init =
     Model "" "\" \";"
 
 
+minusPrefix : String -> String
+minusPrefix =
+    String.dropLeft 20
+
+
 update : Msg -> Model -> Model
 update msg model =
     case msg of
@@ -18,7 +23,7 @@ update msg model =
             { model | sql = newSQL, java = toJavaLines newSQL }
 
         NewJava newJava ->
-            { model | java = newJava, sql = toSQLLines newJava }
+            { model | java = (minusPrefix newJava), sql = toSQLLines (minusPrefix newJava) }
 
         NoOp ->
             model
