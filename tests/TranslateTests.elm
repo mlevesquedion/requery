@@ -103,6 +103,15 @@ unitTests =
                         toSQL "+ \" SELECT * FROM Cats \";"
                 in
                     \_ -> Expect.equal expected actual
+            , test "keeps parentheses" <|
+                let
+                    expected =
+                        "(a, b, c)"
+
+                    actual =
+                        toSQL "+ \" (a, b, c) \";"
+                in
+                    \_ -> Expect.equal expected actual
             ]
         , describe "toSQLLines"
             [ test "translates a single line" <|
