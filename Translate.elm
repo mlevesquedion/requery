@@ -33,7 +33,7 @@ toJavaLines =
 
 sqlInJava : Regex
 sqlInJava =
-    regex "( ?)( *)([\\w\\(].*[\\w\\*\\)]|\\w)"
+    regex "( ?)( *)([\\w\\(\\[].*[\\w\\*\\)\\]]|\\w)"
 
 
 toSQL : String -> String

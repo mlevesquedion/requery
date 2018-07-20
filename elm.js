@@ -15436,17 +15436,12 @@ var _user$project$View$halfPageDiv = _rtfeldman$elm_css$Html_Styled$div(
 							_1: {
 								ctor: '::',
 								_0: _rtfeldman$elm_css$Css$height(
-									_rtfeldman$elm_css$Css$pct(100)),
+									_rtfeldman$elm_css$Css$pct(99)),
 								_1: {
 									ctor: '::',
-									_0: _rtfeldman$elm_css$Css$minHeight(
-										_rtfeldman$elm_css$Css$pct(100)),
-									_1: {
-										ctor: '::',
-										_0: _rtfeldman$elm_css$Css$flex(
-											_rtfeldman$elm_css$Css$num(1)),
-										_1: {ctor: '[]'}
-									}
+									_0: _rtfeldman$elm_css$Css$flex(
+										_rtfeldman$elm_css$Css$num(1)),
+									_1: {ctor: '[]'}
 								}
 							}
 						}
@@ -15474,7 +15469,7 @@ var _user$project$View$twoColumnWrapper = _rtfeldman$elm_css$Html_Styled$div(
 					_0: _rtfeldman$elm_css$Css$backgroundColor(_user$project$View$colors.secondary),
 					_1: {
 						ctor: '::',
-						_0: _rtfeldman$elm_css$Css$minHeight(
+						_0: _rtfeldman$elm_css$Css$height(
 							_rtfeldman$elm_css$Css$pct(100)),
 						_1: {ctor: '[]'}
 					}
@@ -15528,67 +15523,62 @@ var _user$project$View$largeTextArea = F3(
 								_1: {
 									ctor: '::',
 									_0: _rtfeldman$elm_css$Css$height(
-										_rtfeldman$elm_css$Css$px(700)),
+										_rtfeldman$elm_css$Css$pct(80)),
 									_1: {
 										ctor: '::',
-										_0: _rtfeldman$elm_css$Css$minHeight(
-											_rtfeldman$elm_css$Css$px(700)),
+										_0: _user$project$View$paragraphFont,
 										_1: {
 											ctor: '::',
-											_0: _user$project$View$paragraphFont,
+											_0: _rtfeldman$elm_css$Css$flex(
+												_rtfeldman$elm_css$Css$num(1)),
 											_1: {
 												ctor: '::',
-												_0: _rtfeldman$elm_css$Css$flex(
-													_rtfeldman$elm_css$Css$num(1)),
+												_0: _rtfeldman$elm_css$Css$resize(_rtfeldman$elm_css$Css$none),
 												_1: {
 													ctor: '::',
-													_0: _rtfeldman$elm_css$Css$resize(_rtfeldman$elm_css$Css$none),
+													_0: A3(
+														_rtfeldman$elm_css$Css$border3,
+														_rtfeldman$elm_css$Css$px(5),
+														_rtfeldman$elm_css$Css$solid,
+														borderColor),
 													_1: {
 														ctor: '::',
-														_0: A3(
-															_rtfeldman$elm_css$Css$border3,
-															_rtfeldman$elm_css$Css$px(5),
-															_rtfeldman$elm_css$Css$solid,
-															borderColor),
+														_0: _rtfeldman$elm_css$Css$marginTop(
+															_rtfeldman$elm_css$Css$px(5)),
 														_1: {
 															ctor: '::',
-															_0: _rtfeldman$elm_css$Css$marginTop(
-																_rtfeldman$elm_css$Css$px(5)),
-															_1: {
-																ctor: '::',
-																_0: _rtfeldman$elm_css$Css$focus(
-																	{
+															_0: _rtfeldman$elm_css$Css$focus(
+																{
+																	ctor: '::',
+																	_0: A3(
+																		_rtfeldman$elm_css$Css$border3,
+																		_rtfeldman$elm_css$Css$px(10),
+																		_rtfeldman$elm_css$Css$solid,
+																		_user$project$View$colors.tertiary),
+																	_1: {
 																		ctor: '::',
-																		_0: A3(
-																			_rtfeldman$elm_css$Css$border3,
-																			_rtfeldman$elm_css$Css$px(10),
-																			_rtfeldman$elm_css$Css$solid,
-																			_user$project$View$colors.tertiary),
+																		_0: _rtfeldman$elm_css$Css$marginTop(
+																			_rtfeldman$elm_css$Css$px(0)),
 																		_1: {
 																			ctor: '::',
-																			_0: _rtfeldman$elm_css$Css$marginTop(
-																				_rtfeldman$elm_css$Css$px(0)),
-																			_1: {
-																				ctor: '::',
-																				_0: _rtfeldman$elm_css$Css$outline(_rtfeldman$elm_css$Css$none),
-																				_1: {ctor: '[]'}
-																			}
+																			_0: _rtfeldman$elm_css$Css$outline(_rtfeldman$elm_css$Css$none),
+																			_1: {ctor: '[]'}
+																		}
+																	}
+																}),
+															_1: {
+																ctor: '::',
+																_0: _rtfeldman$elm_css$Css_Transitions$transition(
+																	{
+																		ctor: '::',
+																		_0: A3(_rtfeldman$elm_css$Css_Transitions$border3, 200, 0, _rtfeldman$elm_css$Css_Transitions$easeInOut),
+																		_1: {
+																			ctor: '::',
+																			_0: A3(_rtfeldman$elm_css$Css_Transitions$marginTop3, 200, 0, _rtfeldman$elm_css$Css_Transitions$easeInOut),
+																			_1: {ctor: '[]'}
 																		}
 																	}),
-																_1: {
-																	ctor: '::',
-																	_0: _rtfeldman$elm_css$Css_Transitions$transition(
-																		{
-																			ctor: '::',
-																			_0: A3(_rtfeldman$elm_css$Css_Transitions$border3, 200, 0, _rtfeldman$elm_css$Css_Transitions$easeInOut),
-																			_1: {
-																				ctor: '::',
-																				_0: A3(_rtfeldman$elm_css$Css_Transitions$marginTop3, 200, 0, _rtfeldman$elm_css$Css_Transitions$easeInOut),
-																				_1: {ctor: '[]'}
-																			}
-																		}),
-																	_1: {ctor: '[]'}
-																}
+																_1: {ctor: '[]'}
 															}
 														}
 													}
@@ -15741,7 +15731,7 @@ var _user$project$View$Colors = F5(
 		return {primary: a, secondary: b, tertiary: c, sql: d, java: e};
 	});
 
-var _user$project$Translate$sqlInJava = _elm_lang$core$Regex$regex('( ?)( *)([\\w\\(].*[\\w\\*\\)]|\\w)');
+var _user$project$Translate$sqlInJava = _elm_lang$core$Regex$regex('( ?)( *)([\\w\\(\\[].*[\\w\\*\\)\\]]|\\w)');
 var _user$project$Translate$toSQL = function (java) {
 	var matches = A3(
 		_elm_lang$core$Regex$find,

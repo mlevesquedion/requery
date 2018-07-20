@@ -74,7 +74,7 @@ twoColumnWrapper =
         [ css
             [ displayFlex
             , backgroundColor colors.secondary
-            , minHeight (pct 100)
+            , height (pct 100)
             ]
         ]
 
@@ -87,8 +87,7 @@ halfPageDiv =
             , flexDirection column
             , alignItems center
             , width (pct 50)
-            , height (pct 100)
-            , minHeight (pct 100)
+            , height (pct 99)
             , flex (num 1)
             ]
         ]
@@ -101,8 +100,7 @@ largeTextArea borderColor val message =
         , onInput message
         , css
             [ width (pct 90)
-            , height (px 700)
-            , minHeight (px 700)
+            , height (pct 80)
             , paragraphFont
             , flex (num 1)
             , resize none

@@ -109,7 +109,16 @@ unitTests =
                         "(a, b, c)"
 
                     actual =
-                        toSQL "+ \" (a, b, c) \";"
+                        toSQL "(a, b, c)"
+                in
+                    \_ -> Expect.equal expected actual
+            , test "keeps brackets" <|
+                let
+                    expected =
+                        "[a, b, c]"
+
+                    actual =
+                        toSQL "[a, b, c]"
                 in
                     \_ -> Expect.equal expected actual
             ]
